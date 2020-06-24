@@ -1,0 +1,230 @@
+body{
+	margin: 0px 0px 0px 0px;
+	background-color: #333333;
+}
+
+/*-------------------------------------------------*/
+
+.navigator{
+	display: flex;
+	align-items: center;
+	background-color: #262626;
+	height: 40px;
+}
+
+.search{
+	width: 600px;
+	margin: 8px 8px 8px 50px;
+}
+
+.tapsDiv{
+	width: 100%;
+	display: flex;
+	flex-direction: row-reverse;
+}
+
+.taps{
+	display: flex;
+	align-items: center;
+	margin: 0px 5px 0px 0px;
+	padding: 0px;
+}
+
+.login{
+	background-color: #383838;
+	border: solid 1px #383838;
+	border-radius: 3px;
+	color: #EEEEEE;
+	outline: none;
+	margin: 2px;
+	width: 60px;
+	height: 20px;
+}
+
+.login:active{
+	background-color: #404040;
+}
+
+.login:hover{
+	cursor: pointer;
+}
+
+.profile{
+	background-color: #383838;
+	border: solid 1px #383838;
+	border-radius: 3px;
+	color: #EEEEEE;
+	outline: none;
+	margin: 2px;
+	width: 60px;
+	height: 20px;
+}
+
+.profile:active{
+	background-color: #D9A50B;
+}
+
+.profile:hover{
+	cursor: pointer;
+}
+
+.notification{
+	background-color: #262626;
+	border: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0px;
+	margin: 2px;
+	width: 20px;
+	height: 20px;
+	outline: none;
+	border-radius: 10px;
+}
+
+.notification:active{
+	background-color: #595959;
+}
+
+.notification:hover{
+	cursor: pointer;
+}
+
+.menu{
+	padding: 0px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 2px;
+	border: solid 1px #383838;
+	border-radius: 3px;
+	background-color: #383838;
+	outline: none;
+	width: 25px;
+	height: 25px;
+}
+
+.menu:hover{
+	cursor: pointer;
+}
+
+.menu:active{
+	background-color: #D9A50B;
+}
+
+.menu:active + .menuBarTaps{
+	display: block;
+}
+
+/*-------------------------------------------------*/
+
+.menuBarTaps{
+	display: none;
+	position: absolute;
+	right: 0px;
+	top: 40px;
+	height: 0px;
+	width: 200px;
+}
+
+.menuBar{
+	display: flex;
+	flex-direction: column;
+	list-style-type: none;
+  	margin: 0;
+  	padding: 0;
+  	border: solid 1px white;
+}
+
+.menuBar li{
+	background-color: #262626;
+	padding: 5px;
+}
+
+.menuBar li:hover{
+	background-color: white;
+	cursor: pointer;
+}
+
+.menuBar li a{
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+}
+
+/*-------------------------------------------------*/
+
+.contentsField{
+	margin:50px auto 0px;
+	width: 80%;
+	height: 1200px;
+	border: 0px solid #262626;
+	border-bottom: 0px;
+	border-radius: 10px;
+	border-bottom-left-radius: 0px;
+	border-bottom-right-radius: 0px;
+	background-color: #262626;
+}
+
+.informationField{
+	background-color: #161616;
+	height: 300px;
+}
+
+/*-------------------------------------------------*/
+
+.loginField{
+	margin: 50px auto;
+	background-color: #EEEEEE;
+	width: 400px;
+	height: 450px;
+	border-radius: 10px;
+}
+
+.loginInputField{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.userProfile{
+	width: 200px;
+	margin: 0px 0px 40px 0px;
+}
+
+.username{
+	background-color: #BFBFBF;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: #FFFFFF;
+	width: 350px;
+	height: 30px;
+	margin: 5px;
+}
+
+.password{
+	background-color: #BFBFBF;
+	border-radius: 5px;
+	border: 0px;
+	outline: none;
+	color: #FFFFFF;
+	width: 350px;
+	height: 30px;
+	margin: 5px;
+}
+
+::placeholder{
+	color: #FFFFFF;
+}
+
+.submit{
+	width: 350px;
+	height: 30px;
+	outline: none;
+	border: 0px;
+	background-color: #454545;
+	margin: 5px;
+	color: #FFFFFF;
+	border-radius: 5px;
+}
