@@ -33,12 +33,22 @@
 			</div>
 		</div>
 
-		<main class="contentsField">
-			
+		<main id="contentsField" class="contentsField">
+			<div class="postPanel">
+				<div class="codePost" v-for="code in codes">
+					<div v-on:click="code.link">
+						<h2>{{ code.title }}</h2>
+						<p>{{ code.discription }}</p>
+	         		</div>
+	         	</div>
+         	</div>
 		</main>
 
 		<footer class="informationField">
 
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>

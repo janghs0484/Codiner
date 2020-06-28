@@ -41,12 +41,42 @@
 			
 		</div>
 
-		<main class="contentsField">
-			
+		<main id="contentsField" class="contentsField">
+			<div class="introduction">
+				<h2>Codiners가 무엇인가요?</h2>
+				<p>Coniders는 당신만의 코드를 언제든지 저장하고 다시 열람할 수 있는 공간입니다. 저희는 더 편한 세상을 위해 고생하시는 모든 개발자분들에게 더 좋은 개발환경을 제공해 드리기 위해 모든 서비스를 무료로 제공하고 있습니다.</p>
+
+				<h2>코드 업로드 방법은?</h2>
+				<p>1. 먼저 로그인을 합니다.
+				<br>2. 등록된 코드가 없다면 화면 중앙에 위치한 '코드 등록하기'버튼을 눌러주세요.
+				<br>3. 이미 코드가 등록되어 있다면, 코드 리스트의 첫번째 자리의 +버튼을 눌러주세요.
+				<br>4. 코드 입력 페이지에서 코드 제목, 코드 내용, 코멘트를 입력후 등록 버튼을 눌러주세요.</p>
+
+				<hr>
+			</div>
+
+			<div class="notions">
+				<h1>공지사항</h1>
+				<p v-for="notion in notions">{{ notion.content }}</p>
+				<hr>
+			</div>
+
+			<div class="donation">
+				<h2>Codiners에서 더 많은 경험과 서비스를 원하시나요?</h2>
+				<div class="donationField">
+					<p>저희는 후원을 받고있습니다. 후원 받은 금액은 전부 서비스 개선을 위해 사용됩니다. Codiners를 응원하실 분은 오른쪽에 후원버튼을 눌러주세요.</p>
+					<div class="donateButtonField">
+						<button class="donate"><b>후원하기</b></button>
+					</div>
+				</div>
+			</div>
 		</main>
 
 		<footer class="informationField">
 
 		</footer>
+
+		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+		<script src="main.js"></script>
 	</body>
 </html>
