@@ -31,25 +31,25 @@
 					</button>
 				</div>
 			</div>
+			<div class="menuBarTaps">
+				<ul class="menuBar" v-model="tttfile">
+					<li><a href="profile.html">Profile</a></li>
+					<li><a href="codes.html">Codes</a></li>
+					<li><a href="settings.html">Settings</a></li>
+				</ul>
+			</div>
+			
 		</div>
 
 		<main id="contentsField" class="contentsField">
-			<div class="postPanel" v-if="isEmpty == false">
-				<div class="addPost" v-on:click="goto('add_code.html')">
-					<p>+</p>
+			<form class="codeUploadField">
+				<textarea class="codeName" name="codeName" v-model="codeTitle" placeholder="제목"></textarea>
+				<textarea class="codeField" name="codeField" v-model="codeContents" placeholder="여기에 코드를 작성하세요"></textarea>
+				<div class="codeSubmit">
+					<button class="cancel">취소</button>
+					<input type="button" value="등록" class="submitCode" v-on:click="addCode(codeTitle, codeContents)">
 				</div>
-				<div class="codePost" v-for="code in codes" v-on:click="goto('./show_code.html?' + 'codeNum=' + code.codeNum)">
-					<div>
-						<h2>{{ code.title }}</h2>
-						<p>{{ code.discription }}</p>
-	         		</div>
-	         	</div>
-         	</div>
-         	<div class="noPostPanel" v-if="isEmpty">
-	         	<div class="addPost">
-	         		<p>+</p>
-	         	</div>
-         	</div>
+			</form>
 		</main>
 
 		<footer class="informationField">
@@ -57,6 +57,6 @@
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="codePost.js"></script>
+		<script src="addCode.js"></script>
 	</body>
 </html>

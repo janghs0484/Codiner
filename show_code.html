@@ -34,22 +34,10 @@
 		</div>
 
 		<main id="contentsField" class="contentsField">
-			<div class="postPanel" v-if="isEmpty == false">
-				<div class="addPost" v-on:click="goto('add_code.html')">
-					<p>+</p>
-				</div>
-				<div class="codePost" v-for="code in codes" v-on:click="goto('./show_code.html?' + 'codeNum=' + code.codeNum)">
-					<div>
-						<h2>{{ code.title }}</h2>
-						<p>{{ code.discription }}</p>
-	         		</div>
-	         	</div>
-         	</div>
-         	<div class="noPostPanel" v-if="isEmpty">
-	         	<div class="addPost">
-	         		<p>+</p>
-	         	</div>
-         	</div>
+			<div class="post" v-on="read()" v-if="nowCodeNum">
+				<h1 class="postName">{{ codes[nowCodeNum - 1].title }}</h1>
+				<p class="postContents">{{ codes[nowCodeNum - 1].contents }}</p>
+			</div>
 		</main>
 
 		<footer class="informationField">
@@ -57,6 +45,6 @@
 		</footer>
 
 		<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
-		<script src="codePost.js"></script>
+		<script src="show_code.js"></script>
 	</body>
 </html>

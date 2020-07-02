@@ -39,22 +39,23 @@
 		</div>
 	</div>
 
-	<div class="loginField">
-		<div><img src=""></div>
-		<form action="logined_home.html">
-			<div class="loginInputField">
-				<img class="userProfile" src="./images/user.png">
+	<div class="loginField" id="loginField">
+		<div class="loginInputField">
+			<center>
+				<form>
+					<img class="userProfile" src="./images/user.png">
 
-				<input type="text" class="username" v-model = "username" placeholder="username">
-				<input type="password" class="password" placeholder="password">
+					<input type="text" class="username" v-model="username" placeholder="username">
+					<input type="password" class="password" v-model="password" placeholder="password">
 
-				<div style="margin: 15px; border-top: 1px solid #262626; width: 370px; height: 1px;"></div>
+					<div style="margin: 15px; border-top: 1px solid #262626; width: 370px; height: 1px;"></div>
 
-				<input type="submit" class="submit" value="Login" v-on:click="login = true">
-			</div>
-			<a style="text-decoration: none; color: #262626; font-size: 10px; margin: 0px 0px 0px 20px;" href="">Sign Up</a>
-			<a style="text-decoration: none; color: #262626; font-size: 10px; margin: 0px 0px 0px 10px;" href="">Forgot password?</a>
-		</form>
+					<input type="submit" class="submit" value="Login" v-on:click="loginCheck()">
+				</form>
+			</center>
+		</div>
+		<a style="text-decoration: none; color: #262626; font-size: 10px; margin: 0px 0px 0px 20px;" href="">Sign Up</a>
+		<a style="text-decoration: none; color: #262626; font-size: 10px; margin: 0px 0px 0px 10px;" href="">Forgot password?</a>
 	</div>
 
 	<footer class="informationField">
@@ -62,6 +63,6 @@
 	</footer>
 	
 	<script src="https://cdn.jsdelivr.net/npm/vue@2.5.2/dist/vue.js"></script>
-    <script src="./main.js"></script>
+    <script src="./login.js"></script>
 </body>
 </html>
